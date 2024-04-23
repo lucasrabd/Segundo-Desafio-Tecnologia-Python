@@ -1,10 +1,17 @@
+#Dockerfile 
 FROM python:3.9-slim
 
-ARG APP_NAME
-ENV APP_NAME=${APP_NAME}
 
 WORKDIR /app
 
-COPY app${APP_NAME}.py .
 
-CMD ["python", "${APP_NAME}.py"]
+COPY app550519.py .
+
+
+ARG APP_NAME
+
+
+ENV APP_NAME=$APP_NAME
+
+
+CMD ["sh", "-c", "python $APP_NAME.py"]
