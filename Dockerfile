@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 
-COPY app550519.py 
+COPY app550519.py . 
 
 
 ARG APP_NAME
